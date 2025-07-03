@@ -70,35 +70,32 @@ export function Testimonials() {
           {[
             
             {
-              name: "Robert Wilson",
-              role: "Restaurant Owner",
-              company: "Wilson's Bistro",
+              name: "KELECTRIC",
+              role: "office",
+              company: "Qaim Khani associate",
               content:
-                "The renovation of our restaurant was flawless. BuildCraft understood our vision and delivered beyond expectations.",
+                "The renovation of our office was flawless. BuildCraft understood our vision and delivered beyond expectations.",
               rating: 5,
-              image: "/placeholder.svg?height=50&width=50",
               bgColor: "from-red-50 to-red-100",
               accentColor: "text-red-600",
             },
             {
-              name: "Lisa Thompson",
+              name: "STATE LAIFE",
               role: "Hotel Manager",
-              company: "Grand Plaza Hotel",
+              company: "hospital",
               content:
-                "Professional, reliable, and exceptional quality. Our hotel renovation was completed with minimal disruption to operations.",
+                "Professional, reliable, and exceptional quality. Our hospital renovation was completed with minimal disruption to operations.",
               rating: 5,
-              image: "/placeholder.svg?height=50&width=50",
               bgColor: "from-indigo-50 to-indigo-100",
               accentColor: "text-indigo-600",
             },
             {
-              name: "David Rodriguez",
+              name: "SPL",
               role: "Facility Manager",
               company: "Metro Shopping Center",
               content:
                 "BuildCraft's project management skills are exceptional. They kept us informed every step of the way.",
               rating: 5,
-              image: "/placeholder.svg?height=50&width=50",
               bgColor: "from-orange-50 to-orange-100",
               accentColor: "text-orange-600",
             },
@@ -115,13 +112,6 @@ export function Testimonials() {
                 </div>
                 <blockquote className="text-slate-700 mb-4 leading-relaxed">"{testimonial.content}"</blockquote>
                 <div className="flex items-center space-x-3">
-                  <Image
-                    src={testimonial.image || "/placeholder.svg"}
-                    alt={testimonial.name}
-                    width={50}
-                    height={50}
-                    className="rounded-full"
-                  />
                   <div>
                     <div className="font-bold text-slate-900">{testimonial.name}</div>
                     <div className={`text-sm ${testimonial.accentColor} font-medium`}>{testimonial.role}</div>

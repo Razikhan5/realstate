@@ -41,14 +41,14 @@ export function Contact() {
                 {
                   icon: Phone,
                   title: "Phone",
-                  content: "+1 (555) 123-4567",
+                  content: "+92 03333243332",
                   subtitle: "Mon-Fri 8AM-6PM",
                   color: "from-green-500 to-green-600",
                 },
                 {
                   icon: Mail,
                   title: "Email",
-                  content: "info@buildcraft.com",
+                  content: "qkassociate@gmail.com",
                   subtitle: "We'll respond within 24 hours",
                   color: "from-blue-500 to-blue-600",
                 },
@@ -56,13 +56,13 @@ export function Contact() {
                   icon: MapPin,
                   title: "Address",
                   content: "123 Construction Ave",
-                  subtitle: "Builder City, BC 12345",
+                  subtitle: "pakistan, karachi, north nazimabad nera by abbasi hospital",
                   color: "from-purple-500 to-purple-600",
                 },
                 {
                   icon: Clock,
                   title: "Business Hours",
-                  content: "Monday - Friday: 8AM - 6PM",
+                  content: "Monday - saturday 8AM - 6PM",
                   subtitle: "Saturday: 9AM - 4PM",
                   color: "from-orange-500 to-orange-600",
                 },
@@ -124,7 +124,7 @@ export function Contact() {
                     <label className="block text-sm font-medium mb-2">Email *</label>
                     <input
                       type="email"
-                      placeholder="john@example.com"
+                      placeholder="qkassociate@gmail.com"
                       className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
                     />
                   </div>
@@ -132,7 +132,7 @@ export function Contact() {
                     <label className="block text-sm font-medium mb-2">Phone</label>
                     <input
                       type="tel"
-                      placeholder="(555) 123-4567"
+                      placeholder="+92 03333243332"
                       className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
                     />
                   </div>
@@ -200,7 +200,7 @@ export function Contact() {
           <h3 className="text-2xl font-bold mb-8">Need Immediate Assistance?</h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-3 rounded-full">
-              Call Now: (555) 123-4567
+              Call Now: +92 03333243332
             </Button>
             <Button
               variant="outline"

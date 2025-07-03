@@ -28,11 +28,11 @@ export default function Home() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="bg-orange-600 p-2 rounded-xl">
-                <Building2 className="h-8 w-8 text-white" />
+              <div className=" p-2 rounded-xl">
+               <img src="logo.jpeg" alt="logo" className="h-16 w-20 text-white rounded-xl"/>
               </div>
               <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                QAIM KHANI ASSOCIATION
+                QAIM KHANI ASSOCIATES
               </span>
             </div>
 

@@ -38,8 +38,6 @@ export function DesignReality() {
       designImage: "/3d1.png",
       realityImages: [
         "/s1.png",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
       ],
       description: "Traditional Middle Eastern architecture with modern amenities",
       details: {
@@ -57,8 +55,7 @@ export function DesignReality() {
       designImage: "/3d2.png",
       realityImages: [
         "/s2.png",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
+        
       ],
       description: "Contemporary office spaces with sustainable design elements",
       details: {
@@ -76,8 +73,6 @@ export function DesignReality() {
       designImage: "/3d3.png",
       realityImages: [
         "/s3.png",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
       ],
       description: "Complete renovation of existing hospital with modern facilities",
       details: {
@@ -91,11 +86,9 @@ export function DesignReality() {
       title: "Residential Apartments",
       location: "Marina District, Dubai",
       category: "Residential",
-      designImage: "/placeholder.svg?height=400&width=600",
+      designImage: "/3d4.png",
       realityImages: [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
+        "/s4.png",
       ],
       description: "High-rise residential complex with panoramic city views",
       details: {
