@@ -10,9 +10,9 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/app/components/components/ui/card";
 import { Button } from "@/app/components/components/ui/button";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 
-const containerVariant = {
+const containerVariant: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -22,14 +22,14 @@ const containerVariant = {
   },
 };
 
-const cardVariant = {
+const cardVariant: Variants = {
   hidden: { opacity: 0, x: -50 },
   show: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: [0.42, 0, 0.58, 1], // 👈 safe cubic bezier easing
     },
   },
   hover: {
@@ -39,7 +39,7 @@ const cardVariant = {
   },
 };
 
-const imageOverlayVariant = {
+const imageOverlayVariant: Variants = {
   hidden: { opacity: 0 },
   hover: {
     opacity: 1,
@@ -48,13 +48,13 @@ const imageOverlayVariant = {
   },
 };
 
-// Define the services array before using it
 const services = [
   {
     icon: Home,
     image: "/d1.webp",
     title: "Residential Construction",
-    description: "Custom homes, renovations, and residential projects built to perfection with attention to every detail",
+    description:
+      "Custom homes, renovations, and residential projects built to perfection with attention to every detail",
     color: "from-blue-500 to-blue-600",
     bgColor: "bg-blue-50",
     textColor: "text-blue-600",
@@ -63,7 +63,8 @@ const services = [
     icon: Building,
     image: "/d2.avif",
     title: "Commercial Buildings",
-    description: "Office buildings, retail spaces, and commercial construction projects that meet industry standards",
+    description:
+      "Office buildings, retail spaces, and commercial construction projects that meet industry standards",
     color: "from-green-500 to-green-600",
     bgColor: "bg-green-50",
     textColor: "text-green-600",
@@ -72,7 +73,8 @@ const services = [
     icon: Award,
     image: "/d3.avif",
     title: "Renovation & Remodeling",
-    description: "Transform your existing space with our expert renovation services and modern design solutions",
+    description:
+      "Transform your existing space with our expert renovation services and modern design solutions",
     color: "from-purple-500 to-purple-600",
     bgColor: "bg-purple-50",
     textColor: "text-purple-600",
@@ -81,7 +83,8 @@ const services = [
     icon: Clock,
     image: "/d4.avif",
     title: "Project Management",
-    description: "End-to-end project management ensuring timely delivery and quality execution of every phase",
+    description:
+      "End-to-end project management ensuring timely delivery and quality execution of every phase",
     color: "from-orange-500 to-orange-600",
     bgColor: "bg-orange-50",
     textColor: "text-orange-600",
@@ -90,7 +93,8 @@ const services = [
     icon: CheckCircle,
     image: "/d5.jpg",
     title: "Quality Assurance",
-    description: "Rigorous quality checks and compliance with all safety standards and building regulations",
+    description:
+      "Rigorous quality checks and compliance with all safety standards and building regulations",
     color: "from-red-500 to-red-600",
     bgColor: "bg-red-50",
     textColor: "text-red-600",
@@ -99,7 +103,8 @@ const services = [
     icon: Wrench,
     image: "/d6.jpg",
     title: "Maintenance Services",
-    description: "Ongoing maintenance and repair services to keep your property in excellent condition",
+    description:
+      "Ongoing maintenance and repair services to keep your property in excellent condition",
     color: "from-indigo-500 to-indigo-600",
     bgColor: "bg-indigo-50",
     textColor: "text-indigo-600",
@@ -108,14 +113,16 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-gradient-to-br from-slate-50 to-orange-50">
+    <section
+      id="services"
+      className="py-24 bg-gradient-to-br from-slate-50 to-orange-50"
+    >
       <div className="container mx-auto px-4 relative z-10">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.42, 0, 0.58, 1] }}
           className="text-center mb-20"
         >
           <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -134,7 +141,6 @@ export function Services() {
           </p>
         </motion.div>
 
-        {/* Animated Cards */}
         <motion.div
           variants={containerVariant}
           initial="hidden"
@@ -147,11 +153,9 @@ export function Services() {
               key={index}
               variants={cardVariant}
               whileHover="hover"
-              custom={index}
             >
               <Card className="border-0 bg-white/80 backdrop-blur-sm shadow-lg h-full flex flex-col group overflow-hidden">
                 <CardContent className="p-0 flex flex-col h-full">
-                  {/* Animated Image */}
                   <div className="relative overflow-hidden">
                     <motion.img
                       src={service.image}
@@ -165,8 +169,7 @@ export function Services() {
                   </div>
 
                   <div className="p-5 flex flex-col flex-grow">
-                    {/* Icon with rotation effect */}
-                    <motion.div 
+                    <motion.div
                       whileHover={{ rotate: 15, scale: 1.1 }}
                       className={`${service.bgColor} w-12 h-12 rounded-xl flex items-center justify-center mb-3`}
                     >
@@ -180,7 +183,6 @@ export function Services() {
                       {service.description}
                     </p>
 
-                    {/* Animated Button */}
                     <motion.div
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
@@ -200,7 +202,6 @@ export function Services() {
           ))}
         </motion.div>
 
-        {/* Pulsing CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -229,7 +230,10 @@ export function Services() {
             <Button className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-6 py-2 rounded-full">
               Get Free Quote
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
+            <Button
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-slate-900"
+            >
               Call Now: +92 03333243332
             </Button>
           </div>
